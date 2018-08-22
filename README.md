@@ -43,7 +43,8 @@ The sixth button (load button) parses all urls in your clipboard and changes its
 After loading the urls you can click the button to open the current url in a new tab in your browser. This is helpful when you are looking at many job openings but cannot apply at the moment, just copy the url, paste it in a text editor and when you are ready to apply just copy all urls and press load.
 The list should look like this, one url per line
 ```
-jobsite.com/opening123
-alldajobs.com/456
-wannawork.com/jobs/789
+http://jobsite.com/opening123
+http://alldajobs.com/456
+http://wannawork.com/jobs/789
 ```
+Urls must start with `http`. You can change this by modifying the `loadButtonCallback( root )` function, specifically this line: `JOBS_ARRAY = findall('(http\S*)', jobData)`
